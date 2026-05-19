@@ -9,9 +9,6 @@ The 5-stage RV32I processor is used as the DUT so the main engineering focus is
 on RTL understanding, SystemVerilog Assertions, SymbiYosys proof setup,
 bounded/cover verification, and counterexample-driven debug.
 
-Target role alignment: **NVIDIA Formal Verification Engineer, New College
-Graduate, JR2017808**.
-
 ## Table of Contents
 
 - [Why This Project](#why-this-project)
