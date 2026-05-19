@@ -276,8 +276,6 @@ riscv-formal/
 | [docs/verification_plan.md](docs/verification_plan.md) | Defines verification goals, properties, commands, and closure criteria |
 | [docs/bug_analysis.md](docs/bug_analysis.md) | Describes intentional bugs and expected counterexample stories |
 | [docs/results.md](docs/results.md) | Records current tool status and expected proof artifacts |
-| [docs/nvidia_alignment.md](docs/nvidia_alignment.md) | Maps project evidence to NVIDIA formal verification requirements |
-| [docs/resume_bullets.md](docs/resume_bullets.md) | Provides resume-ready bullets after proof results are generated |
 | [docs/tool_setup.md](docs/tool_setup.md) | Explains tool installation and run commands |
 
 ## Scope and Limitations
@@ -291,14 +289,3 @@ That restraint is part of the design. A smaller DUT lets the verification work
 be deeper, easier to explain, and more credible for a new-college-graduate
 formal verification role.
 
-## Interview Pitch
-
-I used a compact 5-stage RISC-V pipeline as the DUT, then focused on proving
-the behavior that commonly breaks pipelined RTL: x0 invariance, PC sequencing,
-RAW forwarding, load-use stalls, branch flushes, memory interface safety, and
-bounded writeback progress. I also added intentional RTL bugs so I can explain
-how formal tools produce counterexamples and how those traces lead to root
-cause and closure.
-
-That is why this is positioned as a **formal verification project**, not as a
-CPU-design project.
