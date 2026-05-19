@@ -1,0 +1,32 @@
+diff --git a/rtl/forwarding_unit.sv b/rtl/forwarding_unit.sv
+--- a/rtl/forwarding_unit.sv
++++ b/rtl/forwarding_unit.sv
+@@ -17,20 +17,20 @@ module forwarding_unit (
+         forward_a_o = FWD_REG;
+         forward_b_o = FWD_REG;
+ 
+-        if (ex_mem_reg_write_i && !ex_mem_mem_read_i &&
+-            (ex_mem_rd_i != 5'd0) && (ex_mem_rd_i == id_ex_rs1_i)) begin
+-            forward_a_o = FWD_MEM;
+-        end else if (mem_wb_reg_write_i &&
++        if (mem_wb_reg_write_i &&
+             (mem_wb_rd_i != 5'd0) && (mem_wb_rd_i == id_ex_rs1_i)) begin
+             forward_a_o = FWD_WB;
++        end else if (ex_mem_reg_write_i && !ex_mem_mem_read_i &&
++            (ex_mem_rd_i != 5'd0) && (ex_mem_rd_i == id_ex_rs1_i)) begin
++            forward_a_o = FWD_MEM;
+         end
+ 
+-        if (ex_mem_reg_write_i && !ex_mem_mem_read_i &&
+-            (ex_mem_rd_i != 5'd0) && (ex_mem_rd_i == id_ex_rs2_i)) begin
+-            forward_b_o = FWD_MEM;
+-        end else if (mem_wb_reg_write_i &&
++        if (mem_wb_reg_write_i &&
+             (mem_wb_rd_i != 5'd0) && (mem_wb_rd_i == id_ex_rs2_i)) begin
+             forward_b_o = FWD_WB;
++        end else if (ex_mem_reg_write_i && !ex_mem_mem_read_i &&
++            (ex_mem_rd_i != 5'd0) && (ex_mem_rd_i == id_ex_rs2_i)) begin
++            forward_b_o = FWD_MEM;
+         end
+     end
+ endmodule

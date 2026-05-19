@@ -1,0 +1,37 @@
+name: Formal Verification
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  formal:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: YosysHQ/setup-oss-cad-suite@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Tool versions
+        run: |
+          yosys -V
+          sby --version
+          boolector --version
+          iverilog -V
+      - name: Prove assertions
+        run: make formal
+      - name: Reach cover points
+        run: make cover
+      - name: Simulation smoke test
+        run: make sim
+      - name: Upload proof and waveform artifacts
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: formal-artifacts
+          path: |
+            formal/riscv/
+            formal/cover/
+            waveforms/
+            build/

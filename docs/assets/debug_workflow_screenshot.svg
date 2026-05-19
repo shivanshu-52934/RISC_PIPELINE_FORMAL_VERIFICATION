@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="560" viewBox="0 0 1280 560" role="img" aria-labelledby="title desc">
+  <title id="title">Counterexample debug workflow screenshot</title>
+  <desc id="desc">Intentional bug injection workflow for formal verification counterexamples.</desc>
+  <rect width="1280" height="560" fill="#0b1014"/>
+  <text x="58" y="72" fill="#f4f7f9" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="34" font-weight="800">Counterexample Debug Workflow</text>
+  <text x="58" y="112" fill="#9fb0bf" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20">The interview value is proving, breaking, reading traces, and closing the bug.</text>
+  <g font-family="Inter, Segoe UI, Arial, sans-serif">
+    <rect x="70" y="180" width="220" height="118" rx="14" fill="#111a22" stroke="#76b900" stroke-width="2"/>
+    <text x="102" y="228" fill="#76b900" font-size="24" font-weight="800">1. Inject Bug</text>
+    <text x="102" y="264" fill="#cbd5df" font-size="17">Apply patch from bugs/</text>
+    <rect x="374" y="180" width="220" height="118" rx="14" fill="#111a22" stroke="#76b900" stroke-width="2"/>
+    <text x="406" y="228" fill="#76b900" font-size="24" font-weight="800">2. Run Proof</text>
+    <text x="406" y="264" fill="#cbd5df" font-size="17">sby -f formal/riscv.sby</text>
+    <rect x="678" y="180" width="220" height="118" rx="14" fill="#111a22" stroke="#ff6666" stroke-width="2"/>
+    <text x="710" y="228" fill="#ff8f8f" font-size="24" font-weight="800">3. Inspect CEX</text>
+    <text x="710" y="264" fill="#cbd5df" font-size="17">Open trace in GTKWave</text>
+    <rect x="982" y="180" width="220" height="118" rx="14" fill="#111a22" stroke="#76b900" stroke-width="2"/>
+    <text x="1014" y="228" fill="#76b900" font-size="24" font-weight="800">4. Fix RTL</text>
+    <text x="1014" y="264" fill="#cbd5df" font-size="17">Rerun until closed</text>
+    <path d="M290 239 H374" stroke="#9fb0bf" stroke-width="4"/>
+    <path d="M594 239 H678" stroke="#9fb0bf" stroke-width="4"/>
+    <path d="M898 239 H982" stroke="#9fb0bf" stroke-width="4"/>
+  </g>
+  <rect x="78" y="366" width="1124" height="116" rx="14" fill="#111a22" stroke="#25323d"/>
+  <text x="110" y="410" fill="#f4f7f9" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="23" font-weight="800">Bug library included</text>
+  <text x="110" y="448" fill="#cbd5df" font-family="Consolas, monospace" font-size="18">wrong_forwarding_priority.patch | missing_load_use_rs2.patch | branch_pc_plus4.patch | x0_writable.patch</text>
+</svg>

@@ -1,0 +1,27 @@
+[options]
+mode prove
+depth 24
+
+[engines]
+smtbmc boolector
+
+[script]
+read -formal -D FORMAL -I . -sv alu.sv
+read -formal -D FORMAL -I . -sv regfile.sv
+read -formal -D FORMAL -I . -sv forwarding_unit.sv
+read -formal -D FORMAL -I . -sv hazard_unit.sv
+read -formal -D FORMAL -I . -sv branch_unit.sv
+read -formal -D FORMAL -I . -sv core.sv
+read -formal -D FORMAL -I . -sv formal_harness.sv
+prep -top formal_harness
+
+[files]
+rtl/alu.sv
+rtl/regfile.sv
+rtl/forwarding_unit.sv
+rtl/hazard_unit.sv
+rtl/branch_unit.sv
+rtl/core.sv
+formal/properties.sv
+formal/assumptions.sv
+formal/formal_harness.sv

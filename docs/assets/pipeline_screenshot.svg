@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="560" viewBox="0 0 1280 560" role="img" aria-labelledby="title desc">
+  <title id="title">Pipeline architecture screenshot</title>
+  <desc id="desc">Five-stage RISC-V pipeline with forwarding, stall, branch flush, and SVA observation points.</desc>
+  <rect width="1280" height="560" fill="#0b1014"/>
+  <text x="54" y="70" fill="#f4f7f9" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="34" font-weight="800">DUT Architecture: 5-Stage RV32I Pipeline</text>
+  <text x="54" y="110" fill="#9fb0bf" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20">Small enough for formal proof, realistic enough for hazard and flush assertions.</text>
+  <g font-family="Inter, Segoe UI, Arial, sans-serif">
+    <rect x="62" y="176" width="180" height="120" rx="14" fill="#111a22" stroke="#76b900" stroke-width="2"/>
+    <text x="102" y="226" fill="#76b900" font-size="34" font-weight="800">IF</text>
+    <text x="92" y="260" fill="#cbd5df" font-size="18">Fetch PC</text>
+    <rect x="288" y="176" width="180" height="120" rx="14" fill="#111a22" stroke="#76b900" stroke-width="2"/>
+    <text x="326" y="226" fill="#76b900" font-size="34" font-weight="800">ID</text>
+    <text x="318" y="260" fill="#cbd5df" font-size="18">Decode + RF</text>
+    <rect x="514" y="176" width="180" height="120" rx="14" fill="#111a22" stroke="#76b900" stroke-width="2"/>
+    <text x="552" y="226" fill="#76b900" font-size="34" font-weight="800">EX</text>
+    <text x="546" y="260" fill="#cbd5df" font-size="18">ALU + branch</text>
+    <rect x="740" y="176" width="180" height="120" rx="14" fill="#111a22" stroke="#76b900" stroke-width="2"/>
+    <text x="770" y="226" fill="#76b900" font-size="34" font-weight="800">MEM</text>
+    <text x="778" y="260" fill="#cbd5df" font-size="18">Load/store</text>
+    <rect x="966" y="176" width="180" height="120" rx="14" fill="#111a22" stroke="#76b900" stroke-width="2"/>
+    <text x="1010" y="226" fill="#76b900" font-size="34" font-weight="800">WB</text>
+    <text x="1002" y="260" fill="#cbd5df" font-size="18">Commit RF</text>
+    <path d="M242 236 H288" stroke="#9fb0bf" stroke-width="4"/>
+    <path d="M468 236 H514" stroke="#9fb0bf" stroke-width="4"/>
+    <path d="M694 236 H740" stroke="#9fb0bf" stroke-width="4"/>
+    <path d="M920 236 H966" stroke="#9fb0bf" stroke-width="4"/>
+    <path d="M830 318 C800 420, 610 430, 574 310" fill="none" stroke="#76b900" stroke-width="4"/>
+    <text x="560" y="454" fill="#cfe8b0" font-size="19">EX/MEM and MEM/WB forwarding</text>
+    <path d="M378 314 C354 375, 188 375, 150 312" fill="none" stroke="#ffcc66" stroke-width="4"/>
+    <text x="104" y="410" fill="#ffd98f" font-size="19">Load-use stall holds PC and IF/ID</text>
+    <path d="M604 164 C590 112, 310 122, 152 160" fill="none" stroke="#66c2ff" stroke-width="4"/>
+    <text x="466" y="142" fill="#addfff" font-size="19">Taken branch redirects PC and flushes younger stages</text>
+  </g>
+  <rect x="54" y="486" width="1076" height="38" rx="8" fill="#111a22" stroke="#25323d"/>
+  <text x="78" y="511" fill="#cbd5df" font-family="Consolas, monospace" font-size="17">Observation points: pc_q, if_id_valid_q, id_ex_valid_q, forward_a/b, load_use_stall, ex_branch_taken, wb_valid_o</text>
+</svg>

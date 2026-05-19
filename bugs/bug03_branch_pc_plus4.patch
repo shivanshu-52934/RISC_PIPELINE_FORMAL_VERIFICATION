@@ -1,0 +1,9 @@
+diff --git a/rtl/branch_unit.sv b/rtl/branch_unit.sv
+--- a/rtl/branch_unit.sv
++++ b/rtl/branch_unit.sv
+@@ -9,4 +9,4 @@ module branch_unit (
+ );
+     assign taken_o = branch_i && (rs1_i == rs2_i);
+-    assign target_o = pc_i + imm_i;
++    assign target_o = pc_i + 32'd4 + imm_i;
+ endmodule

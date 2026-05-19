@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="680" viewBox="0 0 1280 680" role="img" aria-labelledby="title desc">
+  <title id="title">Formal verification matrix screenshot</title>
+  <desc id="desc">Verification matrix showing implemented properties and current execution status.</desc>
+  <rect width="1280" height="680" fill="#0b1014"/>
+  <text x="58" y="72" fill="#f4f7f9" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="34" font-weight="800">Formal Verification Matrix</text>
+  <text x="58" y="110" fill="#9fb0bf" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20">Assertions are implemented; full proof execution needs OSS CAD Suite or WSL toolchain.</text>
+  <g font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20">
+    <rect x="58" y="148" width="1164" height="56" rx="10" fill="#17222b" stroke="#2d3a45"/>
+    <text x="86" y="184" fill="#76b900" font-weight="800">Category</text>
+    <text x="360" y="184" fill="#76b900" font-weight="800">Property</text>
+    <text x="850" y="184" fill="#76b900" font-weight="800">Artifact</text>
+    <text x="1070" y="184" fill="#76b900" font-weight="800">Status</text>
+    <g fill="#111a22" stroke="#25323d">
+      <rect x="58" y="218" width="1164" height="58" rx="8"/>
+      <rect x="58" y="286" width="1164" height="58" rx="8"/>
+      <rect x="58" y="354" width="1164" height="58" rx="8"/>
+      <rect x="58" y="422" width="1164" height="58" rx="8"/>
+      <rect x="58" y="490" width="1164" height="58" rx="8"/>
+    </g>
+    <text x="86" y="254" fill="#f4f7f9">Invariant</text>
+    <text x="360" y="254" fill="#cbd5df">x0 always remains zero</text>
+    <text x="850" y="254" fill="#cbd5df">properties.sv</text>
+    <text x="1070" y="254" fill="#ffd98f">Written</text>
+    <text x="86" y="322" fill="#f4f7f9">PC</text>
+    <text x="360" y="322" fill="#cbd5df">PC + 4, stall hold, branch redirect</text>
+    <text x="850" y="322" fill="#cbd5df">properties.sv</text>
+    <text x="1070" y="322" fill="#ffd98f">Written</text>
+    <text x="86" y="390" fill="#f4f7f9">Hazards</text>
+    <text x="360" y="390" fill="#cbd5df">RAW forwarding and load-use stall</text>
+    <text x="850" y="390" fill="#cbd5df">properties.sv</text>
+    <text x="1070" y="390" fill="#ffd98f">Written</text>
+    <text x="86" y="458" fill="#f4f7f9">Control</text>
+    <text x="360" y="458" fill="#cbd5df">Taken branch flushes IF/ID and ID/EX</text>
+    <text x="850" y="458" fill="#cbd5df">properties.sv</text>
+    <text x="1070" y="458" fill="#ffd98f">Written</text>
+    <text x="86" y="526" fill="#f4f7f9">Progress</text>
+    <text x="360" y="526" fill="#cbd5df">Reg-write instruction reaches WB in bounded time</text>
+    <text x="850" y="526" fill="#cbd5df">properties.sv</text>
+    <text x="1070" y="526" fill="#ffd98f">Written</text>
+  </g>
+  <rect x="58" y="590" width="1164" height="52" rx="10" fill="#291d10" stroke="#ffcc66"/>
+  <text x="86" y="623" fill="#ffd98f" font-family="Consolas, monospace" font-size="18">Local result: native PowerShell toolchain missing. CI workflow added to run make formal, make cover, and make sim on GitHub.</text>
+</svg>

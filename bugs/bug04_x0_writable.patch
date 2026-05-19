@@ -1,0 +1,11 @@
+diff --git a/rtl/regfile.sv b/rtl/regfile.sv
+--- a/rtl/regfile.sv
++++ b/rtl/regfile.sv
+@@ -18,6 +18,6 @@ module regfile (
+                 regs_q[i] <= 32'd0;
+             end
+-        end else if (we_i && (rd_i != 5'd0)) begin
++        end else if (we_i) begin
+             regs_q[rd_i] <= rd_data_i;
+         end
+     end

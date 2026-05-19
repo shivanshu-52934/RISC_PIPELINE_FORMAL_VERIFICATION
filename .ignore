@@ -1,0 +1,9 @@
+build/
+.docker-config/
+waveforms/*.vcd
+formal/riscv/
+formal/cover/
+tools/
+*.vvp
+*.fst
+*.vcd

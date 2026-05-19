@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="620" viewBox="0 0 1280 620" role="img" aria-labelledby="title desc">
+  <title id="title">Formal verification project overview</title>
+  <desc id="desc">Hero graphic for a RISC-V formal verification portfolio project.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1014"/>
+      <stop offset="1" stop-color="#101820"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="620" fill="url(#bg)"/>
+  <rect x="42" y="38" width="1196" height="544" rx="22" fill="#111a22" stroke="#25323d"/>
+  <text x="86" y="112" fill="#76b900" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">FORMAL VERIFICATION PROJECT</text>
+  <text x="86" y="174" fill="#f4f7f9" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="52" font-weight="800">5-Stage RV32I Pipeline as DUT</text>
+  <text x="86" y="222" fill="#b8c2cc" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="25">SystemVerilog Assertions + SymbiYosys + Counterexample Debug</text>
+  <rect x="86" y="270" width="310" height="104" rx="14" fill="#0e151b" stroke="#2a3742" filter="url(#soft)"/>
+  <text x="114" y="312" fill="#f4f7f9" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="23" font-weight="700">CPU is the DUT</text>
+  <text x="114" y="348" fill="#9fb0bf" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18">Project focus is proof, not CPU design</text>
+  <rect x="426" y="270" width="310" height="104" rx="14" fill="#0e151b" stroke="#2a3742" filter="url(#soft)"/>
+  <text x="454" y="312" fill="#f4f7f9" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="23" font-weight="700">Pipeline Hazards</text>
+  <text x="454" y="348" fill="#9fb0bf" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18">Forwarding, load-use stalls, flushes</text>
+  <rect x="766" y="270" width="310" height="104" rx="14" fill="#0e151b" stroke="#2a3742" filter="url(#soft)"/>
+  <text x="794" y="312" fill="#f4f7f9" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="23" font-weight="700">NVIDIA Aligned</text>
+  <text x="794" y="348" fill="#9fb0bf" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18">RTL reasoning + temporal logic</text>
+  <rect x="86" y="430" width="1090" height="78" rx="14" fill="#76b900" opacity="0.12" stroke="#76b900"/>
+  <text x="116" y="478" fill="#dff6c4" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Proof targets: x0 invariant | PC continuity | RAW forwarding | branch flush | bounded progress</text>
+  <g transform="translate(905 96)">
+    <rect x="0" y="0" width="230" height="118" rx="16" fill="#0c1218" stroke="#32414c"/>
+    <text x="24" y="42" fill="#76b900" font-family="Consolas, monospace" font-size="17">sby -f formal/riscv.sby</text>
+    <text x="24" y="75" fill="#f4f7f9" font-family="Consolas, monospace" font-size="17">mode prove</text>
+    <text x="24" y="100" fill="#9fb0bf" font-family="Consolas, monospace" font-size="15">depth 24</text>
+  </g>
+</svg>
