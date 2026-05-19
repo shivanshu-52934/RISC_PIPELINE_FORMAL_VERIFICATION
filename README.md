@@ -15,7 +15,6 @@ Graduate, JR2017808**.
 ## Table of Contents
 
 - [Why This Project](#why-this-project)
-- [Recruiter Snapshot](#recruiter-snapshot)
 - [Architecture](#architecture)
 - [Verification Scope](#verification-scope)
 - [Screenshots and Visual Documentation](#screenshots-and-visual-documentation)
@@ -25,7 +24,7 @@ Graduate, JR2017808**.
 - [Project Layout](#project-layout)
 - [Documentation Index](#documentation-index)
 - [Scope and Limitations](#scope-and-limitations)
-- [Interview Pitch](#interview-pitch)
+
 
 ## Why This Project
 
